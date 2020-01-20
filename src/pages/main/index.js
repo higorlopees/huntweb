@@ -10,7 +10,7 @@ export default class Main extends Component{
         page: 1
     }
 
-    componentDidMount() {
+    componentWillMount() {
         this.loadProducts();
     }
 
@@ -43,7 +43,6 @@ export default class Main extends Component{
     }
 
     render(){
-        console.log('entrou no main')
         const { products, page, productsInfo } = this.state;
 
         return (

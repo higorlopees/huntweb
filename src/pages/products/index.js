@@ -7,13 +7,13 @@ export default class Product extends Component{
         product: {}
     }
 
-    async componentDidMount() {
+    async componentWillMount() {
         const { id } = this.props.match.params;
         const response = await api.get(`/products/${id}`);
 
         this.setState({ product: response.data });
     }
-    
+
     render(){
         const { product } = this.state;
 
